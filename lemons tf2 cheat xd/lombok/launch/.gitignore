@@ -1,0 +1,17 @@
+/Agent.class
+/AnnotationProcessorHider$AnnotationProcessor.class
+/AnnotationProcessorHider$AstModificationNotifier.class
+/AnnotationProcessorHider$AstModificationNotifierData.class
+/AnnotationProcessorHider$ClaimingProcessor.class
+/AnnotationProcessorHider.class
+/Main.class
+/PatchFixesHider$Delegate.class
+/PatchFixesHider$ExtensionMethod.class
+/PatchFixesHider$LombokDeps.class
+/PatchFixesHider$PatchFixes.class
+/PatchFixesHider$Transform.class
+/PatchFixesHider$Util.class
+/PatchFixesHider$Val.class
+/PatchFixesHider$ValPortal.class
+/PatchFixesHider.class
+/ShadowClassLoader.class
