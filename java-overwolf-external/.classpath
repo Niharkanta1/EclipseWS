@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/OtherWorkSpace/Jars/fastutil-8.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/OtherWorkSpace/Jars/gluegen.jar"/>
+	<classpathentry kind="lib" path="C:/OtherWorkSpace/Jars/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/OtherWorkSpace/Jars/Java-Memory-Manipulation-2.1.2.jar" sourcepath="C:/OtherWorkSpace/Java-Memory-Manipulation"/>
+	<classpathentry kind="lib" path="C:/OtherWorkSpace/Jars/jna-5.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/OtherWorkSpace/Jars/jna-platform-5.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/OtherWorkSpace/Jars/jogl-all-2.3.2.jar"/>
+	<classpathentry kind="lib" path="C:/OtherWorkSpace/Jars/zero-allocation-hashing-0.8.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
