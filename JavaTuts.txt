@@ -1,0 +1,665 @@
+this topic assumes that:
+1) you are semi proficient at game hacking/memory editing/programming
+2) you've already downloaded the JNA.jar and related files and know how to set it up.
+ 
+I haven't found a solid example/explanation of how to do this, so i'll try my best;
+ 
+warning: this is not purely java by any means. as far as I know, java can't interact with anything in the OS as it runs in a virtual machine. i have no idea how the hell this JNA thing works, but oh well.
+ 
+In this example, you will be learning how to cheat at the game "3d pinball" that comes with windows by using  JNA.jar to interface with the native windows functions for editing memory.
+ 
+Now, I'm pretty clueless as to how the JNA actually works, and I pieced this together myself from pretty much nothing. It's still mostly magic to me, but I'll give you everything you need to get at least an example working.
+ 
+First of all, you need an interface for each native windows function you want to use. Here's my code for Kernel32.dll. It is far from complete, but plenty for this example. Kernel32 contains the necessary crap for memory editing. I hope you knew that.
+ 
+[code]
+import com.sun.jna.*;
+import com.sun.jna.win32.StdCallLibrary;
+import com.sun.jna.ptr.IntByReference;
+ 
+public interface Kernel32 extends StdCallLibrary
+{
+    // description from msdn
+    //BOOL WINAPI WriteProcessMemory(
+    //__in   HANDLE hProcess,
+    //__in   LPVOID lpBaseAddress,
+    //__in   LPCVOID lpBuffer,
+    //__in   SIZE_T nSize,
+    //__out  SIZE_T *lpNumberOfBytesWritten
+    //);
+    boolean WriteProcessMemory(Pointer p, int address, Pointer buffer, int size, IntByReference written);
+   
+   
+    //BOOL WINAPI ReadProcessMemory(
+    //          __in   HANDLE hProcess,
+    //          __in   LPCVOID lpBaseAddress,
+    //          __out  LPVOID lpBuffer,
+    //          __in   SIZE_T nSize,
+    //          __out  SIZE_T *lpNumberOfBytesRead
+    //        );
+    boolean ReadProcessMemory(Pointer hProcess, int inBaseAddress, Pointer outputBuffer, int nSize, IntByReference outNumberOfBytesRead);
+   
+   
+    //HANDLE WINAPI OpenProcess(
+    //  __in  DWORD dwDesiredAccess,
+    //  __in  BOOL bInheritHandle,
+    //  __in  DWORD dwProcessId
+    //);
+    Pointer OpenProcess(int desired, boolean inherit, int pid);
+   
+    /* derp */
+    int GetLastError();
+}
+[/code]
+ 
+ 
+User32 also contains a few very important functions - GetWindowThreadProcessID and FindWindowA. Here's some code I luckily lifted off of google. I think it's the entire User32 class rewritten as java. Thanks, Mr. Todd Fast. now, this is way more than we need, but it could be nice to have someday.
+ 
+[code]
+import com.sun.jna.Native;
+import com.sun.jna.Pointer;
+import com.sun.jna.Structure;
+import com.sun.jna.examples.win32.W32API;
+import com.sun.jna.examples.win32.GDI32.RECT;
+import com.sun.jna.ptr.ByteByReference;
+import com.sun.jna.ptr.IntByReference;
+ 
+/** Provides access to the w32 user32 library.
+ * Incomplete implementation to support demos.
+ *  
+ * @author  Todd Fast, todd.fast@sun.com
+ * @author twall@users.sf.net
+ */
+public interface User32 extends W32API {
+ 
+    User32 INSTANCE = (User32)
+        Native.loadLibrary("user32", User32.class, DEFAULT_OPTIONS);
+   
+    Pointer GetDC(Pointer hWnd);
+    int ReleaseDC(Pointer hWnd, Pointer hDC);
+ 
+    int FLASHW_STOP = 0;
+    int FLASHW_CAPTION = 1;
+    int FLASHW_TRAY = 2;
+    int FLASHW_ALL = (FLASHW_CAPTION|FLASHW_TRAY);
+    int FLASHW_TIMER = 4;
+    int FLASHW_TIMERNOFG = 12;
+   
+    public static class FLASHWINFO extends Structure {
+        public int cbSize;
+        public Pointer hWnd;
+        public int dwFlags;
+        public int uCount;
+        public int dwTimeout;
+    }
+ 
+    int IMAGE_BITMAP=0;
+    int IMAGE_ICON=1;
+    int IMAGE_CURSOR=2;
+    int IMAGE_ENHMETAFILE=3;
+ 
+    int LR_DEFAULTCOLOR     =0x0000;
+    int LR_MONOCHROME       =0x0001;
+    int LR_COLOR            =0x0002;
+    int LR_COPYRETURNORG    =0x0004;
+    int LR_COPYDELETEORG    =0x0008;
+    int LR_LOADFROMFILE     =0x0010;
+    int LR_LOADTRANSPARENT  =0x0020;
+    int LR_DEFAULTSIZE      =0x0040;
+    int LR_VGACOLOR         =0x0080;
+    int LR_LOADMAP3DCOLORS  =0x1000;
+    int LR_CREATEDIBSECTION =0x2000;
+    int LR_COPYFROMRESOURCE =0x4000;
+    int LR_SHARED           =0x8000;
+ 
+    Pointer FindWindowA(String winClass, String title);
+    int GetClassName(Pointer hWnd, byte[] lpClassName, int nMaxCount);
+    public static class GUITHREADINFO extends Structure {
+        public int cbSize = size();
+        public int flags;
+        Pointer hwndActive;
+        Pointer hwndFocus;
+        Pointer hwndCapture;
+        Pointer hwndMenuOwner;
+        Pointer hwndMoveSize;
+        Pointer hwndCaret;
+        RECT rcCaret;
+    }
+    boolean GetGUIThreadInfo(int idThread, GUITHREADINFO lpgui);
+   
+    public static class WINDOWINFO extends Structure {
+        public int cbSize = size();
+        public RECT rcWindow;
+        public RECT rcClient;
+        public int dwStyle;
+        public int dwExStyle;
+        public int dwWindowStatus;
+        public int cxWindowBorders;
+        public int cyWindowBorders;
+        public short atomWindowType;
+        public short wCreatorVersion;
+    }
+    boolean GetWindowInfo(Pointer hWnd, WINDOWINFO pwi);
+    boolean GetWindowRect(Pointer hWnd, RECT rect);
+    int GetWindowText(Pointer hWnd, byte[] lpString, int nMaxCount);
+    int GetWindowTextLength(Pointer hWnd);
+    int GetWindowModuleFileName(Pointer hWnd, byte[] lpszFileName, int cchFileNameMax);
+    int GetWindowThreadProcessId(Pointer hWnd, IntByReference lpdwProcessId);
+    interface WNDENUMPROC extends StdCallCallback {
+        /** Return whether to continue enumeration. */
+        boolean callback(Pointer hWnd, Pointer data);
+    }
+    boolean EnumWindows(WNDENUMPROC lpEnumFunc, Pointer data);
+    boolean EnumThreadWindows(int dwThreadId, WNDENUMPROC lpEnumFunc, Pointer data);
+ 
+    boolean FlashWindowEx(FLASHWINFO info);
+ 
+    Pointer LoadIcon(Pointer hInstance, String iconName);
+ 
+    Pointer LoadImage(Pointer hinst,   // handle to instance
+                      String name,  // image to load
+                      int type,        // image type
+                      int xDesired,     // desired width
+                      int yDesired,     // desired height
+                      int load        // load options
+    );
+ 
+    boolean DestroyIcon(Pointer hicon);
+ 
+    int GWL_EXSTYLE = -20;
+    int GWL_STYLE = -16;
+    int GWL_WNDPROC = -4;
+    int GWL_HINSTANCE = -6;
+    int GWL_ID = -12;
+    int GWL_USERDATA = -21;
+    int DWL_DLGPROC = 4;
+    int DWL_MSGRESULT = 0;
+    int DWL_USER = 8;
+    int WS_EX_COMPOSITED = 0x20000000;
+    int WS_EX_LAYERED = 0x80000;
+    int WS_EX_TRANSPARENT = 32;
+    int GetWindowLong(Pointer hWnd, int nIndex);
+    int SetWindowLong(Pointer hWnd, int nIndex, int dwNewLong);
+ 
+    int LWA_COLORKEY = 1;
+    int LWA_ALPHA = 2;
+    int ULW_COLORKEY = 1;
+    int ULW_ALPHA = 2;
+    int ULW_OPAQUE = 4;
+    boolean SetLayeredWindowAttributes(Pointer hwnd, int crKey,
+                                       byte bAlpha, int dwFlags);
+    boolean GetLayeredWindowAttributes(Pointer hwnd,
+                                       IntByReference pcrKey,
+                                       ByteByReference pbAlpha,
+                                       IntByReference pdwFlags);
+ 
+    /** Defines the x- and y-coordinates of a point. */
+    public static class POINT extends Structure {
+        public int x, y;
+    }
+    /** Specifies the width and height of a rectangle. */
+    public static class SIZE extends Structure {
+        public int cx, cy;
+    }
+    int AC_SRC_OVER = 0x00;
+    int AC_SRC_ALPHA = 0x01;
+    int AC_SRC_NO_PREMULT_ALPHA = 0x01;
+    int AC_SRC_NO_ALPHA = 0x02;
+    public static class BLENDFUNCTION extends Structure {
+        public byte BlendOp = AC_SRC_OVER; // only valid value
+        public byte BlendFlags = 0; // only valid value
+        public byte SourceConstantAlpha;
+        public byte AlphaFormat;
+    }
+    boolean UpdateLayeredWindow(Pointer hwnd, Pointer hdcDst,
+                                POINT pptDst, SIZE psize,
+                                Pointer hdcSrc, POINT pptSrc, int crKey,
+                                BLENDFUNCTION pblend, int dwFlags);
+    int SetWindowRgn(Pointer hWnd, Pointer hRgn, boolean bRedraw);
+    int VK_SHIFT = 16;
+    int VK_LSHIFT = 0xA0;
+    int VK_RSHIFT = 0xA1;
+    int VK_CONTROL = 17;
+    int VK_LCONTROL = 0xA2;
+    int VK_RCONTROL = 0xA3;
+    int VK_MENU = 18;
+    int VK_LMENU = 0xA4;
+    int VK_RMENU = 0xA5;
+    boolean GetKeyboardState(byte[] state);
+    short GetAsyncKeyState(int vKey);
+}
+[/code]
+ 
+Good. copy and paste both of those into your java project.
+ 
+Now, make the class that will be containing the actual code for cheating. I named my class Cheater.
+ 
+[code]
+public class Cheater
+{
+    public static void main(String[] args)
+    {
+ 
+    }
+}
+[/code]
+ 
+Amazing. now what?
+ 
+First, imports. lots of them.
+ 
+[code]
+import java.util.Arrays;
+import com.sun.jna.Memory;
+import com.sun.jna.Native;
+import com.sun.jna.Pointer;
+import com.sun.jna.ptr.IntByReference;
+import com.sun.jna.*;
+ 
+public class Cheater
+{
+    public static void main(String[] args)
+    {
+ 
+    }
+}
+[/code]
+ 
+Okay, cool. we've got imports. Can we start memory editing yet? no. not even close. you now need to load the native libraries using the JNA.
+ 
+here's how.
+ 
+[code]
+import java.util.Arrays;
+import com.sun.jna.Memory;
+import com.sun.jna.Native;
+import com.sun.jna.Pointer;
+import com.sun.jna.ptr.IntByReference;
+import com.sun.jna.*;
+ 
+public class Cheater
+{
+    static Kernel32 kernel32 = (Kernel32) Native.loadLibrary("kernel32", Kernel32.class);
+    static User32     user32 = (User32)   Native.loadLibrary("user32"  , User32.class);
+   
+    public static void main(String[] args)
+    {
+ 
+        }
+}
+[/code]
+ 
+cool spacing, eh? yeah, whatever. you should be focusing.
+ 
+So, now that we have the interface's to the native functions all set up, we can start hackin', right?! still not close.
+ 
+Pretend you're memory editing in C++ or visual basic or whatever else - what do you need to do first before you can read/write memory to a process? you need the process ID. so how the hell do we get the process ID? just like in C++ - we use GetWindowThreadProcessId() !
+ 
+so, GetWindowThreadProcessID() is located in user32.dll - so let's peek at our interface.
+ 
+[code]
+...
+     int GetWindowThreadProcessId(Pointer hWnd, IntByReference lpdwProcessId);
+...
+[/code]
+ 
+great, the function is in our interface. that means we can use it. but... how do we do that? what the hell is a Pointer in java terms? how do we get the hWnd?! IntByReference?! wtf?!
+ 
+yeah, this is why this is hard to do. we're basically translating C++ into java.
+ 
+anyways, the first parameter for GetWindowThreadProcessId() is a hWnd. how do we get that in C++? with FindWindowA() of course!
+ 
+let's see now... yep, FindWindowA() is definitely in our user32 interface-
+ 
+[code]
+     Pointer FindWindowA(String winClass, String title);
+[/code]
+ 
+luckily, it takes Strings (phew). us java users know how those work (i hope).
+ 
+so let's piece together some code, shall we?
+ 
+why not make a getProcessId() method in our cheater class just to make things easier to read and use.
+ 
+[code]
+    public static int getProcessId(String window)
+    {
+        IntByReference pid = new IntByReference(0);
+        user32.GetWindowThreadProcessId(user32.FindWindowA(null,window), pid);
+       
+        return pid.getValue();
+    }
+[/code]
+ 
+perfect. this will return the integer process ID of the window we ask for - but as you can probably tell, I skipped ahead of myself a bit.
+ 
+the first thing you notice is
+ 
+[code]
+IntByReference pid = new IntByReference(0);
+[/code]
+ 
+an IntByReference comes from our import "import com.sun.jna.ptr.IntByReference;" It is just used as a pointer, basically. the variable "pid" is where GetWindowThreadProcessId will put the processes PID. we can't use just regular java ints because of what the MSDN documentation says:
+ 
+ 
+[code]
+ 
+DWORD WINAPI GetWindowThreadProcessId(
+  __in       HWND hWnd,
+  __out_opt  LPDWORD lpdwProcessId
+);
+[/code]
+[url]http://msdn.microsoft.com/en-us/library/ms633522(VS.85).aspx[/url]
+"LPDWORD
+- A pointer to a variable that receives the process identifier."
+ 
+since it has to be a pointer, we're forced to use IntByReference. You should be able to figure out how they work just by looking at the code above.
+ 
+"pid.getValue()" just turns the pointer back into a regular java int. easy enough.
+ 
+-------------------------
+ 
+Alright, great. We can now get the process ID of a given process. here's how it should look:
+ 
+[code]
+import java.util.Arrays;
+import com.sun.jna.Memory;
+import com.sun.jna.Native;
+import com.sun.jna.Pointer;
+import com.sun.jna.ptr.IntByReference;
+import com.sun.jna.*;
+ 
+public class Cheater
+{
+    static Kernel32 kernel32 = (Kernel32) Native.loadLibrary("kernel32", Kernel32.class);
+    static User32     user32 = (User32)   Native.loadLibrary("user32"  , User32.class);
+   
+    public static void main(String[] args)
+    {
+        int pid = getProcessId("3D Pinball for Windows - Space Cadet");
+    }
+   
+    public static int getProcessId(String window)
+    {
+        IntByReference pid = new IntByReference(0);
+        user32.GetWindowThreadProcessId(user32.FindWindowA(null,window), pid);
+       
+        return pid.getValue();
+    }
+[/code]
+ 
+great, we're getting somewhere. But what comes next? if this were C++, we would need to open the process so that we can start getting down and dirty. that's right, now we get to rewrite OpenProcess().
+ 
+let's check it out in the Kernel32 interface;
+ 
+[code]
+    /*
+    HANDLE WINAPI OpenProcess(
+      __in  DWORD dwDesiredAccess,
+      __in  BOOL bInheritHandle,
+      __in  DWORD dwProcessId
+    );
+     */
+    Pointer OpenProcess(int desiredAccess, boolean inherit, int pid);
+[/code]
+ 
+this should be relatively straightforward to any experienced people - the MSDN documentation ([url]http://msdn.microsoft.com/en-us/library/ms684320(VS.85).aspx[/url]) tells us the parameters.
+ 
+so, it takes a DWORD (also known as double word (which is also known as int. 4 bytes. i'm sure you knew that.)) to know what access we're trying to open the process with. check out some of the possible values here- [url]http://msdn.microsoft.com/en-us/library/ms684880(v=VS.85).aspx[/url]
+ 
+then we can see that it takes a boolean. the boolean isn't so important. we like it when it is true.
+ 
+finally, it takes in the processID. we got that earlier! yay!
+ 
+so let's write another method in our Cheater class to, once again, make things easier on ourself.
+ 
+[code]
+    public static Pointer openProcess(int permissions, int pid)
+    {
+        Pointer process = kernel32.OpenProcess(permissions,true, pid);
+        return process;
+    }
+[/code]
+ 
+that was simple enough. the most difficult part of getting all of this to work is re-coding the C++ datatypes as java datatypes. I don't even remember how I figured out how it should return a Pointer. luckily for us, it gets even more difficult later. (since java has no unsigned data types)
+ 
+so let's see how things are shaping up so far;
+ 
+[code]
+import java.util.Arrays;
+import com.sun.jna.Memory;
+import com.sun.jna.Native;
+import com.sun.jna.Pointer;
+import com.sun.jna.ptr.IntByReference;
+import com.sun.jna.*;
+ 
+public class Cheater
+{
+    static Kernel32 kernel32 = (Kernel32) Native.loadLibrary("kernel32", Kernel32.class);
+    static User32     user32 = (User32)   Native.loadLibrary("user32"  , User32.class);
+   
+    public static void main(String[] args)
+    {
+        int pid = getProcessId("3D Pinball for Windows - Space Cadet");
+        Pointer readprocess = openProcess(0x0010, pid);
+    }
+   
+    public static int getProcessId(String window)
+    {
+        IntByReference pid = new IntByReference(0);
+        user32.GetWindowThreadProcessId(user32.FindWindowA(null,window), pid);
+       
+        return pid.getValue();
+    }
+   
+    public static Pointer openProcess(int permissions, int pid)
+    {
+        Pointer process = kernel32.OpenProcess(permissions,true, pid);
+        return process;
+    }
+[/code]
+ 
+if you're confused as to why "Pointer readprocess = openProcess(0x0010, pid);" has 0x0010, go back to this link: [url]http://msdn.microsoft.com/en-us/library/ms684880(v=VS.85).aspx[/url]
+ 
+[quote]
+PROCESS_VM_READ (0x0010)        Required to read memory in a process using ReadProcessMemory.
+[/quote]
+ 
+right-o.
+ 
+so now let's have some fun. let's make java print out our current score!
+ 
+for that, we now need to recreate ReadProcessMemory(). I gave you the interface for it in the Kernel32 class:
+ 
+[code]
+    /*
+    BOOL WINAPI ReadProcessMemory(
+              __in   HANDLE hProcess,
+              __in   LPCVOID lpBaseAddress,
+              __out  LPVOID lpBuffer,
+              __in   SIZE_T nSize,
+              __out  SIZE_T *lpNumberOfBytesRead
+            );
+    */
+    boolean ReadProcessMemory(Pointer hProcess, int inBaseAddress, Pointer outputBuffer, int nSize, IntByReference outNumberOfBytesRead);
+[/code]
+ 
+so let's go through those paremeters.
+ 
+Pointer hProcess - check (our variable "readprocess")
+ 
+int inBaseAddress - check (the memory address we want to start reading from. if you need help with this step, check out some tutorials on finding memory addresses using a memory searcher/editor such as Memory Hacking Software ([url]http://memoryhacking.com/)[/url])
+ 
+Pointer outbutBuffer - ok, what the hell is this? let's check the trusty MSDN:
+ 
+[quote]
+lpBuffer [out]
+A pointer to a buffer that receives the contents from the address space of the specified process.
+[/quote]
+ 
+so basically, it's where the memory that we read is going to be stored. i'll show you how this works in a second.
+ 
+int nSize - this is just how much memory we should be reading from the process (in bytes) remember, an integer value is 4 bytes. most of the time you're going to be reading 4 bytes if you want to read a number.
+ 
+IntByReference outNumberOfBytesRead - the MSDN tells us that this will hold the number of bytes that actually gets read. it will be the same as nSize most of the time.
+ 
+-------
+ 
+alright, so let's piece this this together by making another method in our Cheater class.
+ 
+[code]
+    public static Memory readMemory(Pointer process, int address, int bytesToRead)
+    {
+        IntByReference read = new IntByReference(0);
+        Memory output = new Memory(bytesToRead);
+       
+        kernel32.ReadProcessMemory(process, address, output, bytesToRead, read);
+        return output;
+    }
+[/code]
+ 
+let's break this down:
+ 
+we know what an IntByReference is for, but what is a "Memory" ? Memory is just a class that the JNA uses to hold memory. go figure. the constructor it takes is how much memory it should hold (in bytes)
+ 
+hopefully the rest is fully understandable. if not, feel free to ask about it.
+ 
+ 
+so this is how the Cheater class should look so far:
+ 
+[code]
+import java.util.Arrays;
+import com.sun.jna.Memory;
+import com.sun.jna.Native;
+import com.sun.jna.Pointer;
+import com.sun.jna.ptr.IntByReference;
+import com.sun.jna.*;
+ 
+public class Cheater
+{
+    static Kernel32 kernel32 = (Kernel32) Native.loadLibrary("kernel32", Kernel32.class);
+    static User32     user32 = (User32)   Native.loadLibrary("user32"  , User32.class);
+   
+    public static void main(String[] args)
+    {
+        int pid = getProcessId("3D Pinball for Windows - Space Cadet");
+        Pointer readprocess = openProcess(0x0010, pid);
+        int size = 4;
+        Memory read = readMemory(readprocess,0x00AB0C62,size);
+    }
+ 
+    public static int getProcessId(String window)
+    {
+        IntByReference pid = new IntByReference(0);
+        user32.GetWindowThreadProcessId(user32.FindWindowA(null,window), pid);
+       
+        return pid.getValue();
+    }
+   
+    public static Pointer openProcess(int permissions, int pid)
+    {
+        Pointer process = kernel32.OpenProcess(permissions,true, pid);
+        return process;
+    }
+ 
+    public static Memory readMemory(Pointer process, int address, int bytesToRead)
+    {
+        IntByReference read = new IntByReference(0);
+        Memory output = new Memory(bytesToRead);
+       
+        kernel32.ReadProcessMemory(process, address, output, bytesToRead, read);
+        return output;
+    }
+}
+[/code]
+ 
+"int size = 4;"
+this is the size in bytes of what we want to read. since the score is held in an integer and an integer is 4 bytes, we definitely want to read 4 bytes.
+ 
+"Memory read = readMemory(readprocess,0x00AB0C62,size);"
+0x00AB0C62 is the memory address that holds the score for pinball.
+ 
+now you see that we're using the Memory class again to hold.. well, memory.
+ 
+so how do we get the value out of the Memory class? simple. we read 4 bytes. 4 bytes is an integer. the Memory class has a method for this.
+ 
+read.getInt(0) (0 is the offset. we don't want an offset)
+ 
+so.. great. now we can read memory with java!
+ 
+let's see how it all comes together.
+ 
+[code]
+import java.util.Arrays;
+import com.sun.jna.Memory;
+import com.sun.jna.Native;
+import com.sun.jna.Pointer;
+import com.sun.jna.ptr.IntByReference;
+import com.sun.jna.*;
+ 
+public class Cheater
+{
+    static Kernel32 kernel32 = (Kernel32) Native.loadLibrary("kernel32", Kernel32.class);
+    static User32     user32 = (User32)   Native.loadLibrary("user32"  , User32.class);
+   
+    public static void main(String[] args)
+    {
+        int pid = getProcessId("3D Pinball for Windows - Space Cadet"); // get our process ID
+        Pointer readprocess = openProcess(0x0010, pid); // open the process ID with read priviledges.
+       
+        int size = 4; // we want to read 4 bytes
+        Memory read = readMemory(readprocess,0x00AB0C62,size); // read 4 bytes of memory starting at the address 0x00AB0C62.
+ 
+        System.out.println(read.getInt(0)); // print out the value!
+    }
+   
+    public static int getProcessId(String window)
+    {
+        IntByReference pid = new IntByReference(0);
+        user32.GetWindowThreadProcessId(user32.FindWindowA(null,window), pid);
+       
+        return pid.getValue();
+    }
+   
+    public static Pointer openProcess(int permissions, int pid)
+    {
+        Pointer process = kernel32.OpenProcess(permissions,true, pid);
+        return process;
+    }
+   
+    public static Memory readMemory(Pointer process, int address, int bytesToRead)
+    {
+        IntByReference read = new IntByReference(0);
+        Memory output = new Memory(bytesToRead);
+       
+        kernel32.ReadProcessMemory(process, address, output, bytesToRead, read);
+        return output;
+    }
+}
+[/code]
+ 
+congratulations, you now have the framework for reading process memory with java.
+ 
+i'm not going to jerk your chain around and make you guess on how to write memory with java. it's pretty much the same process:
+ 
+[code]
+    public static int writeMemory(Pointer process, int address, short[] data)
+    {
+        IntByReference written =  new IntByReference(0);
+       
+        Memory toWrite = new Memory(data.length);
+       
+        for(long i = 0; i < data.length;i++)
+        {
+            toWrite.setShort(0, data[new Integer(Long.toString(i))]);
+        }
+       
+        boolean b = kernel32.WriteProcessMemory(process, address, toWrite, data.length, written);
+        return written.getValue();
+    }
+[/code]
+ 
+ 
+Enjoy!
+ 
+- Deject3d
