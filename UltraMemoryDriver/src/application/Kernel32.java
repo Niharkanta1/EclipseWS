@@ -8,6 +8,9 @@ import com.sun.jna.ptr.IntByReference;
   
 public interface Kernel32 extends StdCallLibrary  
 {  
+	
+	final Kernel32 INSTANCE = (Kernel32) Native.loadLibrary ("kernel32", Kernel32.class);
+	
     // description from msdn  
     //BOOL WINAPI WriteProcessMemory(  
     //__in   HANDLE hProcess,  

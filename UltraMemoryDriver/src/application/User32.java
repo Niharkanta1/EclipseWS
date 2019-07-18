@@ -108,7 +108,6 @@ public interface User32 extends W32APIOptions {
   
     boolean GetWindowRect(Pointer hWnd, RECT rect);  
   
-  
     int GetWindowText(Pointer hWnd, byte[] lpString, int nMaxCount);  
   
   

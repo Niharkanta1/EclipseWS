@@ -7,4 +7,12 @@
 <fullyQualifiedTypeName name="com.sun.jna.platform.win32.Tlhelp32"/>
 <fullyQualifiedTypeName name="javafx.fxml.FXMLLoader"/>
 <fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
+<fullyQualifiedTypeName name="com.sun.jna.Pointer"/>
+<fullyQualifiedTypeName name="com.sun.jna.Memory"/>
+<fullyQualifiedTypeName name="com.sun.jna.ptr.IntByReference"/>
+<fullyQualifiedTypeName name="com.github.jonatino.natives.win32.Kernel32"/>
+<fullyQualifiedTypeName name="com.sun.jna.platform.win32.User32"/>
+<fullyQualifiedTypeName name="application.Psapi.LPMODULEINFO"/>
+<fullyQualifiedTypeName name="com.sun.jna.platform.win32.Kernel32"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
