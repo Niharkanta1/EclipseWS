@@ -4,6 +4,7 @@ import java.util.List;
 import com.sun.jna.Memory;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
+import com.sun.jna.platform.win32.WinNT.HANDLE;
 import com.sun.jna.ptr.IntByReference;
 import com.sun.jna.*;
 
@@ -11,14 +12,16 @@ public class Cheat
 {
 	static Kernel32 kernel32 = (Kernel32) Native.loadLibrary("kernel32", Kernel32.class);
     static User32     user32 = (User32)   Native.loadLibrary("user32"  , User32.class);
+    static String exeName = "Notepad";
     public static void main(String[] args)
     {
-        int pid = getProcessId("Notepad"); // get our process ID
+        int pid = getProcessId(exeName); // get our process ID
         Pointer readprocess = openProcess(0x0010, pid); // open the process ID with read priviledges.
        
         int size = 4; // we want to read 4 bytes
-        Memory read = readMemory(readprocess,0x00AB0C62,size); // read 4 bytes of memory starting at the address 0x00AB0C62.
-        System.out.println(read.getInt(0)); // print out the value!
+       // Memory read = readMemory(readprocess,0x00AB0C62,size); // read 4 bytes of memory starting at the address 0x00AB0C62.
+        int base = getBaseAddress(readprocess);
+        System.out.println(base); // print out the value!
     }
    
     public static int getProcessId(String window)
@@ -43,15 +46,14 @@ public class Cheat
         return output;
     }
     
-    public int getBaseAddress(Pointer pointer) {
+    public static int getBaseAddress(Pointer pointer) {
         try {
                 Pointer hProcess = pointer;
-                List<Module> hModules = PsapiHandler.getInstance().EnumProcessModules(hProcess);
+                List<Module> hModules = PsapiTools.getInstance().EnumProcessModules(new HANDLE(hProcess));
 
                 for(Module m: hModules){
                         if(m.getFileName().contains(exeName)){
-                                misc.log(m.getFileName() + ": 0x" + Long.toHexString(Pointer.nativeValue(m.getEntryPoint())));
-                                return Integer.valueOf("" + Pointer.nativeValue(m.getLpBaseOfDll()));
+                                return Integer.valueOf("" + Pointer.nativeValue(m.getLpBaseOfDll().getPointer()));
                         }
                 }
         } catch (Exception e) {  e.printStackTrace(); }

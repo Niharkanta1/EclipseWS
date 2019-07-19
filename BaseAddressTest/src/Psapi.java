@@ -1,6 +1,3 @@
-
-
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -35,20 +32,6 @@ public interface Psapi extends StdCallLibrary{
     
     int GetModuleBaseNameA(HANDLE hProcess, HMODULE hModule, byte[] lpImageFileName, int nSize);
 
-    
-    /*
-     * http://msdn.microsoft.com/en-us/library/ms684229(VS.85).aspx
-     */
-    public static class LPMODULEINFO extends Structure {
-            public HANDLE lpBaseOfDll;
-            public int  SizeOfImage;
-            public HANDLE EntryPoint;
-			@Override
-			protected List getFieldOrder() {
-				return Arrays.asList(new String[] { "lpBaseOfDll", "SizeOfImage", "EntryPoint"});
-			}
-}
-    
     /*
      * http://msdn.microsoft.com/en-us/library/ms683201(VS.85).aspx
      */

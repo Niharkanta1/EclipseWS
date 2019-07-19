@@ -3,8 +3,6 @@
 import com.sun.jna.platform.win32.WinDef.HMODULE;
 import com.sun.jna.platform.win32.WinNT.HANDLE;
 
-import application.Psapi.LPMODULEINFO;
-
 public class Module {
 	private HANDLE hProcess;
 	private HMODULE hModule;

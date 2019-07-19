@@ -2,8 +2,6 @@
 
 import java.util.LinkedList;
 import java.util.List;
-
-import application.Psapi.LPMODULEINFO;
 import com.sun.jna.Native;
 import com.sun.jna.platform.win32.Kernel32;
 import com.sun.jna.platform.win32.WinDef.HMODULE;
