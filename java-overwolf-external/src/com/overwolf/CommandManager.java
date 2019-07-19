@@ -20,7 +20,6 @@ import com.google.gson.Gson;
 import com.overwolf.util.ChatColor;
 import com.overwolf.util.FileUtil;
 import com.overwolf.util.StringFormat;
-import com.overwolf.util.XKeySym;
 
 public class CommandManager {
 	public ArrayList<String> sentCommands = new ArrayList<String>();
@@ -238,8 +237,8 @@ public class CommandManager {
 		} else if (command.equalsIgnoreCase("bind")) {
 			int bindkey = 0;
 			try {
-				// bindkey = X11.INSTANCE.XStringToKeysym(args[1]).intValue();
-				bindkey = XKeySym.find(args[0]);
+				//todo
+				System.out.println("bind key");
 			} catch (NullPointerException ex) {
 			}
 
@@ -278,7 +277,7 @@ public class CommandManager {
 				if (key.startsWith("keybinds.key.")) {
 					String bkey = key.substring("keybinds.key.".length());
 					if (StringFormat.isInteger(bkey)) {
-						StringFormat.dirmsg("" + ChatColor.GOLD + Engine.x11.XKeycodeToKeysym(Engine.dpy.get(), (byte) (Integer.parseInt(bkey)), 0) + ": " + ChatColor.GRAY + value);
+					//	StringFormat.dirmsg("" + ChatColor.GOLD + Engine.x11.XKeycodeToKeysym(Engine.dpy.get(), (byte) (Integer.parseInt(bkey)), 0) + ": " + ChatColor.GRAY + value);
 					} else {
 						StringFormat.warn(ChatColor.GOLD + "Possible config corruption! Key: " + key + " value: " + value);
 					}

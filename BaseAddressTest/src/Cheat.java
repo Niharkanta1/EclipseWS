@@ -12,10 +12,10 @@ public class Cheat
 {
 	static Kernel32 kernel32 = (Kernel32) Native.loadLibrary("kernel32", Kernel32.class);
     static User32     user32 = (User32)   Native.loadLibrary("user32"  , User32.class);
-    static String exeName = "Notepad";
+    static String exeName = "ac_client";
     public static void main(String[] args)
     {
-        int pid = getProcessId(exeName); // get our process ID
+        int pid = getProcessId("AssaultCube"); // get our process ID
         Pointer readprocess = openProcess(0x0010, pid); // open the process ID with read priviledges.
        
         int size = 4; // we want to read 4 bytes
@@ -27,7 +27,8 @@ public class Cheat
     public static int getProcessId(String window)
     {
         IntByReference pid = new IntByReference(0);
-        user32.GetWindowThreadProcessId(user32.FindWindowA(null,window), pid);
+        Pointer process = user32.FindWindowA(null,window);
+        user32.GetWindowThreadProcessId(process, pid);
        
         return pid.getValue();
     }

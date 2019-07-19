@@ -7,9 +7,9 @@ import java.util.Locale;
 import com.overwolf.util.DrawUtils;
 
 public final class Main {
-
-	// http://stackoverflow.com/questions/2580279/how-do-i-run-my-application-as-superuser-from-eclipse
-	public static void main(String... args) {		
+	
+	public static void main(String... args) {	
+		System.out.println("Starting overwolf....");
 		Locale.setDefault(new Locale("en", "US"));
 		try {
 			boolean demop = false;
@@ -35,5 +35,4 @@ public final class Main {
 			e.printStackTrace();
 		}
 	}
-
 }
