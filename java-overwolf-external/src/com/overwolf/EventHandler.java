@@ -163,32 +163,24 @@ public class EventHandler {
 		}
 	}
 
-	public void onKeyPress(KeySym key) {
-		Client.theClient.configManager.executeCommandOnKey(key.intValue());
-		for (Module eventModule : Client.theClient.moduleManager.activeModules) {
-			eventModule.onKeyPress(key);
-		}
-		try {
-			if (Client.theClient.jsinitialized)
-				Client.theClient.jsinvocable.invokeMethod(Client.theClient.jsengine.eval("EventHandler"), "onKeyPress", key);
-		} catch (NoSuchMethodException | ScriptException e) {
-			e.printStackTrace();
-		}
-	}
-
-	public void onKeyRelease(KeySym key) {
-		Client.theClient.configManager.executeCommandOnKeyRelease(key.intValue());
-		for (Module eventModule : Client.theClient.moduleManager.activeModules) {
-			eventModule.onKeyRelease(key);
-		}
-		try {
-			if (Client.theClient.jsinitialized)
-				Client.theClient.jsinvocable.invokeMethod(Client.theClient.jsengine.eval("EventHandler"), "onKeyRelease", key);
-		} catch (NoSuchMethodException | ScriptException e) {
-			e.printStackTrace();
-		}
-	}
-
+	/*
+	 * public void onKeyPress(KeySym key) {
+	 * Client.theClient.configManager.executeCommandOnKey(key.intValue()); for
+	 * (Module eventModule : Client.theClient.moduleManager.activeModules) {
+	 * eventModule.onKeyPress(key); } try { if (Client.theClient.jsinitialized)
+	 * Client.theClient.jsinvocable.invokeMethod(Client.theClient.jsengine.eval(
+	 * "EventHandler"), "onKeyPress", key); } catch (NoSuchMethodException |
+	 * ScriptException e) { e.printStackTrace(); } }
+	 * 
+	 * public void onKeyRelease(KeySym key) {
+	 * Client.theClient.configManager.executeCommandOnKeyRelease(key.intValue());
+	 * for (Module eventModule : Client.theClient.moduleManager.activeModules) {
+	 * eventModule.onKeyRelease(key); } try { if (Client.theClient.jsinitialized)
+	 * Client.theClient.jsinvocable.invokeMethod(Client.theClient.jsengine.eval(
+	 * "EventHandler"), "onKeyRelease", key); } catch (NoSuchMethodException |
+	 * ScriptException e) { e.printStackTrace(); } }
+	 */
+	
 	public void onEngineLoaded() {
 		for (Module eventModule : Client.theClient.moduleManager.activeModules) {
 			eventModule.onEngineLoaded();

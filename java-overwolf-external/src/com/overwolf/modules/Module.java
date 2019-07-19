@@ -1,9 +1,6 @@
 package com.overwolf.modules;
 
 import java.util.TreeMap;
-
-import com.sun.jna.platform.unix.X11.KeySym;
-
 import com.overwolf.Client;
 import com.overwolf.util.StringFormat;
 
@@ -105,9 +102,6 @@ public class Module {
 	public void onDisconnect() {
 	}
 
-	public void onKeyPress(KeySym key) {
-	}
-
 	public void onEngineLoaded() {
 	}
 
@@ -119,8 +113,4 @@ public class Module {
 
 	public void onClientShutdown() {
 	}
-
-	public void onKeyRelease(KeySym key) {
-	}
-
 }
