@@ -1,4 +1,4 @@
-package com.ButterCake.utils
+package com.buttercake.utils
 
 inline fun <R> retry(duration: Long = 1000, noinline exceptionHandler: ((Throwable) -> Unit)? = null, body: () -> R) {
 	while (!Thread.interrupted()) {

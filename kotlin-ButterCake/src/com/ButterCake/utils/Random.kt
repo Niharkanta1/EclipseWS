@@ -1,4 +1,4 @@
-package com.ButterCake.utils
+package com.buttercake.utils
 
 import java.util.concurrent.ThreadLocalRandom.current as tlr
 

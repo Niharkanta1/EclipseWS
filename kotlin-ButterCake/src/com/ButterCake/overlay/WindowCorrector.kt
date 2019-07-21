@@ -1,10 +1,10 @@
-package com.ButterCake.overlay
+package com.buttercake.overlay
 
 import com.sun.jna.platform.win32.WinDef
 import com.sun.jna.platform.win32.User32
 import com.sun.jna.platform.win32.WinUser
 import com.sun.jna.Pointer
-import com.ButterCake.game.EFT
+import com.buttercake.game.EFT
 
 object WindowCorrector {
 	const val SWP_NOSIZE = 0x0001

@@ -1,4 +1,4 @@
-package com.ButterCake.overlay.transparency.win10
+package com.buttercake.overlay.transparency.win10
 
 import com.sun.jna.Pointer
 import com.sun.jna.Structure

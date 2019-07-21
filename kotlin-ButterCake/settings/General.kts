@@ -1,3 +1,3 @@
-package com.charlatano.settings
+import com.charlatano.settings.*;
 
-var FIRE_KEY = 1
+FIRE_KEY = 1

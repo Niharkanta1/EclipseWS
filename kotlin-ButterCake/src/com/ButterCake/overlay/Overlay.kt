@@ -1,17 +1,17 @@
-package com.ButterCake.overlay
+package com.buttercake.overlay
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration
 import com.sun.jna.platform.win32.User32
 import com.sun.jna.platform.win32.WinDef
-import com.ButterCake.game.EFT.gameWidth
-import com.ButterCake.game.EFT.gameHeight
-import com.ButterCake.game.EFT.gameX
-import com.ButterCake.game.EFT.gameY
-import com.ButterCake.utils.randLong
+import com.buttercake.game.EFT.gameWidth
+import com.buttercake.game.EFT.gameHeight
+import com.buttercake.game.EFT.gameX
+import com.buttercake.game.EFT.gameY
+import com.buttercake.utils.randLong
 import com.charlatano.settings.*
-import com.ButterCake.overlay.transparency.TransparencyApplier
-import com.ButterCake.overlay.transparency.win10.Win10TransparencyApplier
+import com.buttercake.overlay.transparency.TransparencyApplier
+import com.buttercake.overlay.transparency.win10.Win10TransparencyApplier
 
 object Overlay {
 	@Volatile var opened = false
@@ -55,6 +55,7 @@ object Overlay {
 		transparencyApplier.applyTransparency(hwnd)
 		
 		opened = true
+		println("Overlay initiated....")
 	}
 	
 	init {

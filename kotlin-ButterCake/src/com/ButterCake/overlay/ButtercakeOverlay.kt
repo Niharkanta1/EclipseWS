@@ -1,4 +1,4 @@
-package com.ButterCake.overlay
+package com.buttercake.overlay
 
 import com.badlogic.gdx.Gdx.gl
 import com.badlogic.gdx.ApplicationAdapter
@@ -8,10 +8,10 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.graphics.g2d.BitmapFont
 import com.badlogic.gdx.graphics.Color
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
-import com.ButterCake.game.EFT.gameWidth;
-import com.ButterCake.game.EFT.gameHeight;
+import com.buttercake.game.EFT.gameWidth;
+import com.buttercake.game.EFT.gameHeight;
 import com.badlogic.gdx.graphics.GL20
-import com.ButterCake.utils.inBackground
+import com.buttercake.utils.inBackground
 
 
 object ButtercakeOverlay  : ApplicationAdapter() {

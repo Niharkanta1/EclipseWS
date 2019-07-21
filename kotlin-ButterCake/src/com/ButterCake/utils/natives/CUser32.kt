@@ -1,4 +1,4 @@
-package com.ButterCake.utils.natives
+package com.buttercake.utils.natives
 
 import com.sun.jna.Native
 import com.sun.jna.platform.win32.WinDef

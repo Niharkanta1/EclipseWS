@@ -1,4 +1,4 @@
-package com.ButterCake.game
+package com.buttercake.game
 
 import com.sun.jna.Pointer
 import com.sun.jna.platform.win32.User32
@@ -6,13 +6,13 @@ import com.sun.jna.platform.win32.WinDef
 import org.jire.arrowhead.Process
 import org.jire.arrowhead.processByName
 import com.charlatano.settings.*
-import com.ButterCake.utils.retry
-import com.ButterCake.utils.natives.CUser32
-import com.ButterCake.utils.every
-import com.ButterCake.overlay.Overlay
-import com.ButterCake.overlay.ButtercakeOverlay.camera
-import com.ButterCake.overlay.ButtercakeOverlay
-import com.ButterCake.utils.inBackground
+import com.buttercake.utils.retry
+import com.buttercake.utils.natives.CUser32
+import com.buttercake.utils.every
+import com.buttercake.overlay.Overlay
+import com.buttercake.overlay.ButtercakeOverlay.camera
+import com.buttercake.overlay.ButtercakeOverlay
+import com.buttercake.utils.inBackground
 
 object EFT {
 	lateinit var eftEXE: Process

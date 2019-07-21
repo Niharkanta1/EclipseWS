@@ -1,4 +1,4 @@
-package com.ButterCake.overlay.transparency.win10
+package com.buttercake.overlay.transparency.win10
 
 object AccentState {
 	

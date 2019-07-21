@@ -1,12 +1,12 @@
 @file:JvmName("ButterCake")
-package com.ButterCake
+package com.buttercake
 
 import javax.script.ScriptEngineManager
 import java.io.File
 import java.io.FileReader
 import com.charlatano.settings.*;
-import com.ButterCake.overlay.Overlay
-import com.ButterCake.game.EFT
+import com.buttercake.overlay.Overlay
+import com.buttercake.game.EFT
 import java.util.Scanner
 
 const val SETTINGS_DIRECTORY = "settings"

@@ -1,6 +1,6 @@
-package com.ButterCake.overlay.transparency.win10
+package com.buttercake.overlay.transparency.win10
 
-import com.ButterCake.overlay.transparency.TransparencyApplier
+import com.buttercake.overlay.transparency.TransparencyApplier
 import com.sun.jna.NativeLibrary
 import com.sun.jna.platform.win32.WinDef
 import com.sun.jna.platform.win32.WinNT.HRESULT

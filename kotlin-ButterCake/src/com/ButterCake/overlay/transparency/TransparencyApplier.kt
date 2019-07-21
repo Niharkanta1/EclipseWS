@@ -1,4 +1,4 @@
-package com.ButterCake.overlay.transparency
+package com.buttercake.overlay.transparency
 
 import com.sun.jna.platform.win32.WinDef
 
