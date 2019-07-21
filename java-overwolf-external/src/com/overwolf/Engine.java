@@ -2,28 +2,34 @@ package com.overwolf;
 
 import java.io.IOException;
 
-import com.github.jonatino.misc.MemoryBuffer;
-import com.github.jonatino.process.Process;
-import com.github.jonatino.process.Processes;
-import com.overwolf.util.MemoryUtils;
+import org.jire.arrowhead.Process;
+import org.jire.arrowhead.ProcessBy;
+
+import com.overwolf.unative.CUser32;
+import com.sun.jna.platform.win32.WinDef;
+import com.sun.jna.platform.win32.WinDef.HWND;
+import com.sun.jna.platform.win32.WinDef.RECT;
 
 public final class Engine {
 
-	private static Process process, localprocess = Processes.byId(MemoryUtils.getPID());
+	private static Process process;
 	private static final int TARGET_TPS = 200;
 	private long tps_sleep = (long) ((1f / TARGET_TPS) * 1000);
 	private long last_tick = 0;
-	
-	public static MemoryBuffer entlistbuffer = new MemoryBuffer(Long.BYTES * 4 * 65);
 	public static long tick = 0;
 	public static int isInGame = 0;
 	public static String[] cmdargs;
 
 	public void init(String[] args) throws InterruptedException, IOException {
-		System.out.println(localprocess.id());
 		String processName = "notepad.exe";		
-		waitUntilFound("process", () -> (process = Processes.byName(processName)) != null);
-		System.out.println(process.id());
+		waitUntilFound("process", () -> (process = ProcessBy.processByName(processName)) != null);
+		RECT rect = new WinDef.RECT();
+		HWND hwd = CUser32.FindWindowA(null, "Untitled - Notepad");
+		CUser32.GetClientRect(hwd, rect);
+		int gameWidth = rect.right - rect.left;
+		int gameHeight = rect.bottom - rect.top;
+		
+		System.out.println(process.getId()+" "+gameHeight+" "+gameWidth);
 	}
 	
 	private void waitUntilFound(String message, Clause clause) {
