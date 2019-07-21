@@ -5,10 +5,16 @@
 	<classpathentry kind="lib" path="lib/fastutil-8.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/gluegen.jar"/>
 	<classpathentry kind="lib" path="lib/gson-2.2.2.jar"/>
-	<classpathentry kind="lib" path="lib/Java-Memory-Manipulation-2.1.2.jar"/>
-	<classpathentry kind="lib" path="lib/jna-5.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/Java-Memory-Manipulation-2.1.2.jar" sourcepath="D:/CODING/JAVA/Game/Java-Memory-Manipulation-master"/>
+	<classpathentry kind="lib" path="lib/jna-5.3.1.jar" sourcepath="D:/CODING/Jars/jna-platform-5.3.1-sources.jar"/>
 	<classpathentry kind="lib" path="lib/jna-platform-5.3.1.jar" sourcepath="D:/CODING/Jars/jna-platform-5.3.1-sources.jar"/>
 	<classpathentry kind="lib" path="lib/jogl-all-2.3.2.jar"/>
 	<classpathentry kind="lib" path="lib/zero-allocation-hashing-0.8.jar"/>
+	<classpathentry kind="lib" path="lib/arrowhead-1.3.3.jar"/>
+	<classpathentry kind="lib" path="D:/CODING/Jars/kotlin-0.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/kotlin-reflect.jar"/>
+	<classpathentry kind="lib" path="lib/kotlin-script-runtime.jar"/>
+	<classpathentry kind="lib" path="lib/kotlin-stdlib.jar"/>
+	<classpathentry kind="lib" path="lib/system-hook-3.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
