@@ -1,4 +1,4 @@
-package com.overwolf.unative;
+package com.overwolf.natives;
 
 import com.sun.jna.Native;
 import com.sun.jna.platform.win32.WinDef.*;

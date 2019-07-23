@@ -34,5 +34,8 @@ public final class Main {
 		} catch (InterruptedException | IOException e) {
 			e.printStackTrace();
 		}
+		finally {
+			System.out.println("Closing Overwolf...");
+		}
 	}
 }
