@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.jetbrains.kotlin.core.KOTLIN_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/jna-5.3.1.jar"/>
 	<classpathentry kind="lib" path="lib/jna-platform-5.3.1.jar"/>
 	<classpathentry kind="lib" path="lib/gdx-1.9.9.jar"/>
@@ -20,5 +19,6 @@
 	<classpathentry kind="lib" path="lib/lwjgl_util-2.9.2.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl-2.9.2.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl-platform-2.9.2-natives-windows.jar"/>
-	<classpathentry kind="output" path="out/production/kotlin-ButterCake"/>
+	<classpathentry kind="con" path="org.jetbrains.kotlin.core.KOTLIN_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
 </classpath>

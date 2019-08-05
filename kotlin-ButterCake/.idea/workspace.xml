@@ -2,36 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a657acdb-117e-44b9-b712-6692803cf983" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.metadata/.bak_0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.bak_0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.bak_1.log" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.bak_1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.bak_2.log" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.bak_2.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__2_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/indexNamesMap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/indexNamesMap.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments.gen" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments.gen" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments.gen" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments.gen" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.core/nexus/b98708686c6a9866070f66b7de8f3b76/segments.gen" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.core/nexus/b98708686c6a9866070f66b7de8f3b76/segments.gen" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.workbench.texteditor/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.workbench.texteditor/dialog_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.xtext.builder/builder.state" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.xtext.builder/builder.state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/version.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-overwolf-external/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../java-overwolf-external/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-overwolf-external/src/com/overwolf/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-overwolf-external/src/com/overwolf/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/META-INF/kotlin-ButterCake.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/ButterCake.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/game/Color.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/game/EFT$initialize$$inlined$every$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/game/EFT$initialize$$inlined$every$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/game/EFT.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/overlay/ButtercakeOverlay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/overlay/Overlay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/overlay/WindowCorrector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/overlay/transparency/TransparencyApplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/overlay/transparency/win10/AccentPolicy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/overlay/transparency/win10/AccentState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/overlay/transparency/win10/Win10TransparencyApplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/overlay/transparency/win10/WindowCompositionAttribute.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/overlay/transparency/win10/WindowCompositionAttributeData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/utils/EveryKt$every$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/utils/EveryKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/utils/RandomKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/utils/RetryKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/ButterCake/utils/natives/CUser32.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/charlatano/settings/AdvancedKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/charlatano/settings/AimKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/charlatano/settings/ESPKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/charlatano/settings/GeneralKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/charlatano/settings/OpenGLKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-ButterCake/com/charlatano/settings/ScriptsKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/Advanced.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings/Advanced.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/Aim.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings/Aim.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/ESP.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings/ESP.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/General.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings/General.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/OpenGL.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings/OpenGL.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/Scripts.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings/Scripts.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/settings.iml" beforeDir="false" afterPath="$PROJECT_DIR$/settings/settings.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/ButterCake.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/ButterCake.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/game/Color.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/game/Color.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/game/EFT.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/game/EFT.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/overlay/ButtercakeOverlay.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/overlay/ButtercakeOverlay.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/overlay/Overlay.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/overlay/Overlay.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/overlay/WindowCorrector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/overlay/WindowCorrector.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/overlay/transparency/TransparencyApplier.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/overlay/transparency/TransparencyApplier.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/overlay/transparency/win10/AccentPolicy.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/overlay/transparency/win10/AccentPolicy.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/overlay/transparency/win10/AccentState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/overlay/transparency/win10/AccentState.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/overlay/transparency/win10/Win10TransparencyApplier.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/overlay/transparency/win10/Win10TransparencyApplier.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/overlay/transparency/win10/WindowCompositionAttribute.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/overlay/transparency/win10/WindowCompositionAttribute.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/overlay/transparency/win10/WindowCompositionAttributeData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/overlay/transparency/win10/WindowCompositionAttributeData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/settings/ESP.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/settings/ESP.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/utils/Every.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/utils/Every.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/utils/Random.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/utils/Random.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/utils/Retry.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/utils/Retry.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ButterCake/utils/natives/CUser32.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ButterCake/utils/natives/CUser32.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,12 +82,12 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/ButterCake/ButterCake.kt">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/buttercake/ButterCake.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="-278">
+              <caret column="25" selection-start-column="15" selection-end-column="25" />
               <folding>
                 <element signature="e#52#265#0" expanded="true" />
               </folding>
@@ -57,7 +95,48 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/buttercake/game/EFT.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/buttercake/overlay/transparency/win10/Win10TransparencyApplier.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/buttercake/overlay/transparency/TransparencyApplier.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>var</find>
+      <find>ButterCake</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -65,18 +144,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/settings/Aim.kts" />
-        <option value="$PROJECT_DIR$/settings/Advanced.kts" />
         <option value="$PROJECT_DIR$/src/com/ButterCake/game/EFT.kt" />
+        <option value="$PROJECT_DIR$/settings/Advanced.kts" />
+        <option value="$PROJECT_DIR$/settings/Aim.kts" />
+        <option value="$PROJECT_DIR$/settings/ESP.kts" />
+        <option value="$PROJECT_DIR$/settings/General.kts" />
+        <option value="$PROJECT_DIR$/settings/OpenGL.kts" />
+        <option value="$PROJECT_DIR$/settings/Scripts.kts" />
+        <option value="$PROJECT_DIR$/src/com/ButterCake/overlay/Overlay.kt" />
         <option value="$PROJECT_DIR$/src/com/ButterCake/ButterCake.kt" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/settings/settings.iml" />
+        <option value="$PROJECT_DIR$/src/com/buttercake/game/EFT.kt" />
+        <option value="$PROJECT_DIR$/src/com/buttercake/utils/Random.kt" />
+        <option value="$PROJECT_DIR$/src/com/buttercake/utils/Retry.kt" />
       </list>
     </option>
   </component>
@@ -86,7 +165,9 @@
     <option name="width" value="1612" />
     <option name="height" value="876" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -113,7 +194,43 @@
               <item name="kotlin-ButterCake" type="b2602c69:ProjectViewProjectNode" />
               <item name="kotlin-ButterCake" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ButterCake" type="462c0819:PsiDirectoryNode" />
+              <item name="buttercake" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kotlin-ButterCake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlin-ButterCake" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="buttercake" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kotlin-ButterCake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlin-ButterCake" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="buttercake" type="462c0819:PsiDirectoryNode" />
+              <item name="overlay" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kotlin-ButterCake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlin-ButterCake" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="buttercake" type="462c0819:PsiDirectoryNode" />
+              <item name="overlay" type="462c0819:PsiDirectoryNode" />
+              <item name="transparency" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kotlin-ButterCake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlin-ButterCake" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="buttercake" type="462c0819:PsiDirectoryNode" />
+              <item name="settings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kotlin-ButterCake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlin-ButterCake" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="buttercake" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kotlin-ButterCake" type="b2602c69:ProjectViewProjectNode" />
@@ -123,15 +240,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.20515826" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -180,8 +298,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25321338" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20372751" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -198,7 +317,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32934928" />
+      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.2549801" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -220,24 +339,6 @@
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/com/ButterCake/game/EFT.kt</url>
-          <line>44</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/com/ButterCake/ButterCake.kt</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/com/ButterCake/overlay/Overlay.kt</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -249,69 +350,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ButterCake/utils/Retry.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings/Aim.kts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1654">
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/arrowhead-1.3.3.jar!/org/jire/arrowhead/Process.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings/Advanced.kts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ButterCake/settings/Advanced.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ButterCake/game/EFT.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#29#538#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ButterCake/settings/Scripts.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ButterCake/settings/ESP.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ButterCake/overlay/Overlay.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -325,13 +367,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ButterCake/ButterCake.kt">
+    <entry file="file://$PROJECT_DIR$/settings/settings.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/settings/Advanced.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="140">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/Advanced.kts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/Aim.kts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/settings/Aim.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/ESP.kt" />
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/settings/ESP.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/settings/General.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" selection-start-line="1" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/ESP.kts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/General.kts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/OpenGL.kts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" selection-start-column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/settings/Scripts.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="36" selection-start-line="1" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/Scripts.kts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" selection-start-column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/settings/OpenGL.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/overlay/WindowCorrector.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/overlay/ButtercakeOverlay.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gdx-backend-lwjgl-1.9.9.jar!/com/badlogic/gdx/backends/lwjgl/LwjglApplicationConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/overlay/Overlay.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <element signature="e#32#602#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/utils/Random.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/utils/Retry.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/ButterCake.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-278">
+          <caret column="25" selection-start-column="15" selection-end-column="25" />
           <folding>
             <element signature="e#52#265#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/game/EFT.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/overlay/transparency/win10/Win10TransparencyApplier.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/buttercake/overlay/transparency/TransparencyApplier.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -385,11 +584,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>kotlin-ButterCake</last-edited>
+          <last-edited>settings</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20515826" />
               </list>
             </option>
           </splitter-proportions>

@@ -49,15 +49,6 @@ public class JOGL2Renderer implements GLEventListener {
 			return;
 		
 		final GL2 gl = drawable.getGL().getGL2();
-		/*if(Engine.isInGame != 6) {
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {}
-			gl.glClearColor(0f, 0f, 0f, 0f);
-			gl.glFlush();
-			return;
-		}*/
-		
 		ProfilerUtil.start();
 		init2D(drawable, gl);
 		Client.theClient.eventHandler.onUIRender();

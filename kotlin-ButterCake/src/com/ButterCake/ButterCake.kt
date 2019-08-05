@@ -8,6 +8,7 @@ import com.charlatano.settings.*;
 import com.buttercake.overlay.Overlay
 import com.buttercake.game.EFT
 import java.util.Scanner
+import com.buttercake.scripts.esp.esp
 
 const val SETTINGS_DIRECTORY = "settings"
 
@@ -16,7 +17,7 @@ fun main(args: Array<String>){
 	
 	EFT.initialize()
 	
-	//esp()
+	esp()
 	//flatAim()
 	//pathAim()
 	

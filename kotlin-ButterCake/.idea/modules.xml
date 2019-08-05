@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/kotlin-ButterCake.iml" filepath="$PROJECT_DIR$/kotlin-ButterCake.iml" />
+      <module fileurl="file://$PROJECT_DIR$/settings/settings.iml" filepath="$PROJECT_DIR$/settings/settings.iml" />
     </modules>
   </component>
 </project>

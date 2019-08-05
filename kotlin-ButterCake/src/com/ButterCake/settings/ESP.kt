@@ -20,7 +20,10 @@ var BOX_ESP = true
  * Whether or not to change model colors
  */
 var CHAMS = false
-
+/**
+ * Croshair 
+ */
+var CROSSHAIR = true
 /**
  * Brightness of CHAMS
  */

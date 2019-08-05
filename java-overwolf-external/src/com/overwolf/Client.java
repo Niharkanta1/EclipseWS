@@ -32,7 +32,7 @@ public class Client {
 		this.eventHandler = new EventHandler();
 		this.stringFormat = new StringFormat();
 		this.commandManager = new CommandManager();
-		this.configManager = new ConfigManager();
+		//this.configManager = new ConfigManager();
 		this.keyboardHandler = new KeyboardHandler();
 
 		this.nicegson = new GsonBuilder().setPrettyPrinting().create();
