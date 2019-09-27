@@ -1,0 +1,10 @@
+11:36:07,048 INFO  [main] - Removing Updated Entry From Main File..... 
+11:36:07,057 INFO  [main] - Duplicate Count: 2
+11:36:07,058 INFO  [main] - New File Generated -C:\Dev\DevUtils\PropFileEdit\Test\main_filtered.tmp
+11:36:07,058 INFO  [main] - ######## Starting MERGE ########
+
+11:36:07,062 INFO  [main] - ######## Merging is successful! ########
+11:36:07,062 INFO  [main] - Total Merged Lines: 9
+11:36:07,063 INFO  [main] - Adding new Entry to Main File..... 
+11:36:07,070 INFO  [main] - New Entry Found : 3
+11:36:07,070 INFO  [main] - Output File created! -C:\Dev\DevUtils\PropFileEdit\Test\main-2.properties

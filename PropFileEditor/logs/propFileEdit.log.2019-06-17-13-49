@@ -1,0 +1,10 @@
+13:49:27,505 INFO  [main] - Removing Updated Entry From Main File..... 
+13:49:30,993 INFO  [main] - Duplicate Count: 14
+13:49:30,994 INFO  [main] - New File Generated -C:\JIRA\FinalHELabels\text_iw_filtered.tmp
+13:49:30,994 INFO  [main] - ######## Starting MERGE ########
+
+13:49:31,269 INFO  [main] - ######## Merging is successful! ########
+13:49:31,269 INFO  [main] - Total Merged Lines: 16
+13:49:31,269 INFO  [main] - Adding new Entry to Main File..... 
+13:49:31,504 INFO  [main] - New Entry Found : 0
+13:49:31,504 INFO  [main] - Output File created! -C:\JIRA\FinalHELabels\text_iw-2.properties
